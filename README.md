@@ -8,4 +8,4 @@
 - Buat symbolic link dengan perintah ```php artisan storage:link```.
 - Jalankan built-in web server dengan perintah: ```php artisan serve```.
 
-Terakhir, akses aplikasi melalui peramban dengan tautan: ```http://localhost:8000/user/index```.
+Terakhir, akses aplikasi melalui peramban dengan tautan: ```http://localhost:8000/file/index```.
