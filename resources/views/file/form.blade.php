@@ -4,6 +4,12 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
+
+            <div class="alert alert-warning">
+                <h4>Perhatian!</h4>
+                Mohon untuk tidak menggunggah berkas sensitif atau krusial ke dalam contoh aplikasi.
+            </div>
+
             <div class="panel panel-default">
                 <div class="panel-heading">Upload New File</div>
 

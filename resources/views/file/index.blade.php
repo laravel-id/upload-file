@@ -4,6 +4,11 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
+
+            <div class="alert alert-info">
+                <h4>Informasi</h4>
+                Tutorial contoh aplikasi ini dapat dibaca pada tulisan <a href="https://www.laravel.web.id/2017/11/20/upload-file-menggunakan-filesystem-laravel/" class="alert-link">Upload File Menggunakan Filesystem Laravel</a>.
+            </div>
             <div class="panel panel-default">
                 <div class="panel-heading">Upload New File</div>
 
