@@ -16,6 +16,8 @@ Route::redirect('/', 'file/index');
 Route::get('file/upload', 'FileController@form')->name('file.form');
 Route::get('file/index', 'FileController@index')->name('file.index');
 Route::post('file/upload', 'FileController@upload')->name('file.upload');
+Route::get('file/{file}/download', 'FileController@download')->name('file.download');
+Route::get('file/{file}/response', 'FileController@response')->name('file.response');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

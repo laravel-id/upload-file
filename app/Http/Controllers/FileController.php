@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\View\View;
 use App\File;
 use Illuminate\Http\RedirectResponse;
+use Storage;
 
 class FileController extends Controller
 {
@@ -41,5 +42,27 @@ class FileController extends Controller
         return redirect()
             ->back()
             ->withSuccess(sprintf('File %s has been uploaded.', $file->title));        
+    }
+
+    /**
+     * Show data directly yto browser, otherwise, download it.
+     *
+     * @param File $file
+     * @return void
+     */
+    public function response(File $file)
+    {
+        return Storage::response($file->filename);
+    }
+
+    /**
+     * Download file directly.
+     *
+     * @param File $file
+     * @return void
+     */
+    public function download(File $file)
+    {
+        return Storage::download($file->filename, $file->title);
     }
 }

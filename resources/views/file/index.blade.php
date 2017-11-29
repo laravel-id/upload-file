@@ -30,8 +30,8 @@
                                 <tr>
                                     <th>Title</th>
                                     <th>Path</th>
-                                    <th>URL</th>
                                     <th>Created</th>
+                                    <th>Actions</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -39,12 +39,18 @@
                                     <tr>
                                         <td>{{ $file->title }}</td>
                                         <td>{{ $file->filename }}</td>
+                                        <td>{{ $file->created_at->diffForHumans() }}</td>
                                         <td>
-                                            <a href="{{ Storage::url($file->filename) }}">
-                                                View
+                                            <a href="{{ Storage::url($file->filename) }}" title="View file {{ $file->title }}">
+                                                <i class="fa fa-eye"></i>
+                                            </a>
+                                            <a href="{{ route('file.response', $file->id) }}" title="Show or download file {{ $file->title }}">
+                                                <i class="fa fa-expand fa-fw"></i>
+                                            </a>
+                                            <a href="{{ route('file.download', $file->id) }}" title="Download file {{ $file->title }}">
+                                                <i class="fa fa-download fa-fw"></i>
                                             </a>
                                         </td>
-                                        <td>{{ $file->created_at->diffForHumans() }}</td>
                                     </tr>
                                 @endforeach
                             </tbody>
