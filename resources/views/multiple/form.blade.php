@@ -43,15 +43,13 @@
 
                         <div class="form-group {{ !$errors->has('file') ?: 'has-error' }}">
                             <label>File</label>
-                            <input type="file" name="files[]">
-                        </div>
-
-                        <div class="form-group {{ !$errors->has('file') ?: 'has-error' }}">
-                            <label>File</label>
-                            <input type="file" name="files[]">
+                            <div class="files">
+                                <input type="file" name="files[]">
+                            </div>
                         </div>
 
                         <div class="form-actions">
+                            <button type="button" class="add-file btn btn-default">Add New File</button>
                             <button type="submit" class="btn btn-primary">Upload</button>
                         </div>
                     </form>
@@ -61,3 +59,14 @@
     </div>
 </div>
 @endsection
+
+
+@push('js')
+<script>
+    $(function(){
+        $('.add-file').click(function(){
+            $('div.files').append('<input type="file" name="files[]">')
+        })
+    })
+</script>
+@endpush
