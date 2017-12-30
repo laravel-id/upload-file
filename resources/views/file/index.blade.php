@@ -22,6 +22,7 @@
 
                     <p>
                         <a href="{{ route('file.form') }}" class="btn btn-primary">Upload File</a>
+                        <a href="{{ route('multiple.form') }}" class="btn btn-primary">Upload Multiple File</a>
                     </p>
 
                     <div class="table-responsive">
